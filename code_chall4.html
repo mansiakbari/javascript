@@ -59,42 +59,42 @@
         //    console.log(retirement(2001 , "mansi"));
 
 
-        function cutfruitpieces(fruits) {
-            return fruits * 4;
-        }
+        // function cutfruitpieces(fruits) {
+        //     return fruits * 4;
+        // }
 
-        function fruit(apples, oranges) {
+        // function fruit(apples, oranges) {
 
-            const applepieces = cutfruitpieces(apples);
-            const orangepieces = cutfruitpieces(oranges);
+        //     const applepieces = cutfruitpieces(apples);
+        //     const orangepieces = cutfruitpieces(oranges);
 
-            const juice = `apple juice with ${applepieces} piece of apple and orange juice 
-                   with ${orangepieces} piece of oranges`;
-            return juice;
-        }
-        const juiceline = fruit(5, 3);
-        console.log(juiceline);
+        //     const juice = `apple juice with ${applepieces} piece of apple and orange juice 
+        //            with ${orangepieces} piece of oranges`;
+        //     return juice;
+        // }
+        // const juiceline = fruit(5, 3);
+        // console.log(juiceline);
 
         //reviewing..
 
         const calcage = function(birthyear){
             return 2022 - birthyear; 
         }
-        const retiremnt = function(name,birthyear){
+        const yearsuntileretirement = function(name,birthyear){
             const age = calcage(birthyear);
-            const reti = 55 - age;
+            const retirement = 55 - age;
         
-        if (reti > 0 ){
-            console.log(`${name} is retire in ${reti} years..`);
-            return retiremnt;
+        if (retirement > 0 ) {
+            console.log(`${name} is retire in ${retirement} years..`);
+            return retirement;
         } else {
             console.log(`${name} is already retired..;)`);
-            return -1;
-        }       
-        
+            return 9999;
+        }          
     }
-        console.log(retiremnt("mansi" ,2001 ));
-        console.log(retiremnt("abc" , 1970));
+        console.log(yearsuntileretirement("mansi" ,2001 ));
+        console.log(yearsuntileretirement("abc" , 1960));
+
 
 
     </script>
