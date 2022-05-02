@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            //chall 1
+            const calcavg = (a,b,c) => (a+b+c) / 3;
+            console.log(calcavg(1,1,1));
+
+            const scoredol = calcavg(44,23,71);
+            const scorekol = calcavg(65,54,49);
+            console.log(scoredol,scorekol);
+
+            const checkwinner = function(avgdol,avgkol)
+            {
+                if (scoredol >= 2 * scorekol) {
+                    console.log(`dolphin wins (${avgdol} vs. ${avgkol})`);
+                } else if (scorekol >= 2 * scoredol) {
+                    console.log(`koal wins (${avgkol} vs. ${avgdol})`);
+                } else {
+                    console.log("NO ONE WINS..");
+                }
+            }
+            checkwinner(scoredol,scorekol);
+
+            //checkwinner(576,111);
+
+        </script>
+    </body>
+</html>
