@@ -1,0 +1,36 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            //challenge 4-3
+            const mark = {
+                fullname: 'mansiakbari',
+                mass: 78,
+                height: 1.69,
+                calcbmi: function() {
+                    this.bmi = this.mass / this.height ** 2;
+                    return this.bmi;
+                }
+            };
+
+            const john = {
+                fullname: 'mansi',
+                mass: 98,
+                height: 1.95,
+                calcbmi: function() {
+                    this.bmi = this.mass / this.height ** 2;
+                    return this.bmi;
+                }
+            };
+            mark.calcbmi();
+            john.calcbmi();
+            console.log(mark.bmi, john.bmi);
+
+            if (mark.bmi > john.bmi) {
+                console.log(`${mark.fullname}'s BMI (${mark.bmi} is higher than ${john.fullname}'s BMI (${john.bmi})`);
+            } else if (john.bmi < mark.bmi) {
+                console.log(`${john.fullname}'s BMI (${john.bmi} is higher than ${mark.fullname}'s BMI (${mark.bmi})`);
+            }
+        </script>
+    </body>
+</html>

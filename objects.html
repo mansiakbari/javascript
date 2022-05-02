@@ -1,0 +1,67 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            //array
+            const array = ['mansi',
+                            'akabri',
+                            2022-2001,
+                            'student',
+                            ['hani' ,'sanju']
+                        ];
+        //object property
+        const mansi = {
+            firstname: 'mansi',
+            lastname: 'akbari',
+            age: 2022-2001,
+            job: 'student',
+            friends: ['hani','sanju']
+        };
+        console.log(mansi);
+        console.log(mansi.lastname);
+        console.log(mansi['lastname']);
+
+        const interest = prompt("what do you want to know");
+        if (mansi[interest]) {
+            console.log(mansi[interest]);    
+        } else {
+            console.log("wrong req");
+        } 
+        //add object elements with dot or bracat..
+        mansi.location = "dubai";
+        mansi['insta'] = '@mansi';
+        console.log(mansi);
+        //challenge...
+            console.log(`${mansi.firstname} has ${mansi.friends.length} friends, her best friend is called ${mansi.friends[1]}`);
+
+            //object methods..
+            const mansi = {
+                firstname: 'mansi',
+                job: 'student',
+                birthyear: 2001,
+                
+                // calcage: function(birthyear) {
+                //     return 2022-birthyear;
+                // }
+                // calcage: function() {
+                //     console.log(this);
+                //     return 2022-this.birthyear;
+                // }
+                
+                calcage: function() {
+                    this.age = 2022 - this.birthyear;
+                    return this.age;
+                },
+                getsummary: function() {
+                    return `${this.firstname} is a ${this.calcage()} old ${this.job} , and he has a lic`
+                }
+            };
+            console.log(mansi.calcage());
+            console.log(mansi.age);
+            
+            //challenge.
+            console.log(mansi.getsummary());
+
+        </script>
+    </body>
+</html>

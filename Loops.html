@@ -1,0 +1,75 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            // // //for loop
+            // // for(i=1; i<=10; i++) {
+            // //     console.log(`hello for ${i} time`);
+            // // }
+            // //looping array
+            // const mansi = [
+            //     'mansi',
+            //     'akbari',
+            //     true,
+            //     2001,
+            //     true
+            // ];
+            // for (let i = 0; i < mansi.length; i++) {
+            //     console.log(mansi[i],typeof mansi[i]);
+            // }
+            // //fill array to o/p..
+            // const years = [1996,2001,2003];
+            // const age = [];
+
+            // for (i=0; i < years.length; i++) {
+            //     age.push(2022 - years[i]);
+            // }
+            // console.log(years,age);
+            // //continue and break...
+            // console.log('.....only string...');
+            // for (let i = 0; i < mansi.length; i++) {
+            //     if (typeof mansi[i] !== 'string') continue;
+            //     console.log(mansi[i], typeof mansi[i]);
+            // }
+            // console.log('.....till number...');
+            // for (let i = 0; i < mansi.length; i++) {
+            //     if (typeof mansi[i] == 'number') break;
+            //     console.log(mansi[i], typeof mansi[i]);
+            // }
+            //looping backward
+            const mansiak = [
+                'mansi',
+                'akbari',
+                2001,
+                true
+            ];
+            for (let i = mansiak.length - 1 ; i >= 0; i--) {
+                console.log(i, mansiak[i]);
+            }
+            //loop inside loop
+            for (let i = 1; i < 4 ;i++) {
+                console.log("hello");
+
+                for (let j = 1; j < 5; j++) {
+                    console.log(`${i} loop inside loop`);
+                }
+            }
+            //while loop
+            let i = 1;
+            while (i <= 5) {
+                console.log("while loop");
+                i++;
+            }
+            let dice =Math.trunc(Math.random() * 6) + 1;
+            console.log(dice);
+            while (dice !== 6) {
+                console.log(`you rolled a ${dice}`);
+                dice = Math.trunc(Math.random() * 6) + 1;
+                if (dice === 6) console.log("loop is end");
+            }
+
+            //code challenge 4-4
+            
+        </script>
+    </body>
+</html>
