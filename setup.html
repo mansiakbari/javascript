@@ -2,26 +2,26 @@
   <head></head>
   <body>
     <script>
-      //problem solving
-      const temperratures = [3, 2, -5, "error", 9, 17, 15, 9, 5];
-      const calctemp = function (temp) {
-        let max = temp[0];
-        let min = temp[0];
-        for (let i = 0; i < temp.length; i++) {
-          const curtemp = temp[i];
-          if (typeof curtemp !== "number") continue;
+      // //problem solving
+      // const temperratures = [3, 2, -5, "error", 9, 17, 15, 9, 5];
+      // const calctemp = function (temp) {
+      //   let max = temp[0];
+      //   let min = temp[0];
+      //   for (let i = 0; i < temp.length; i++) {
+      //     const curtemp = temp[i];
+      //     if (typeof curtemp !== "number") continue;
 
-          if (curtemp > max) max = curtemp;
-          if (curtemp < min) min = curtemp;
-        }
-        console.log(max, min);
-        return max - min;
-      };
-      const amplitude = calctemp(temperratures);
-      console.log(amplitude);
+      //     if (curtemp > max) max = curtemp;
+      //     if (curtemp < min) min = curtemp;
+      //   }
+      //   console.log(max, min);
+      //   return max - min;
+      // };
+      // const amplitude = calctemp(temperratures);
+      // console.log(amplitude);
 
       //function should recieve two arrays
-      const temperrature = [3, 2, -5, "error", 9, 17, 15, 9, 5];
+      const temperrature = [3, 1, 9, 16, 4, 5];
       const calctempnew = function (t1, t2) {
         const temp = t1.concat(t2);
 
