@@ -1,0 +1,24 @@
+<html>
+  <head> </head>
+  <body>
+    <script>
+      //   console.log("hello");
+      function calage(birthyear) {
+        const age = 2022 - birthyear;
+        function printage() {
+          let output = `${name} you are ${age} , born in  ${birthyear}`;
+          console.log(output);
+          if (birthyear >= 2001 && birthyear <= 2005) {
+            const str = `${name} you are new generation..`;
+            console.log(str);
+            output = "new op";
+          }
+        } 
+        printage();
+        return age;
+      }
+      const name = "Mansi";
+      calage(2001);
+    </script>
+  </body>
+</html>
