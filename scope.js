@@ -16,7 +16,7 @@ function calage(birthyear) {
 const fname = "Mansi";
 calage(2001);
 //
-console.log(me);
+// console.log(me);
 // console.log(job);
 // console.log(year);
 
@@ -25,8 +25,8 @@ let job = "student";
 const year = 2001;
 //functions
 console.log(add(2, 3)); //call declaration before define
-console.log(addex(2, 3));
-console.log(addarrow(2, 3));
+// console.log(addex(2, 3));
+// console.log(addarrow(2, 3));
 function add(a, b) {
   return a + b;
 }
@@ -34,3 +34,19 @@ const addex = function (a, b) {
   return a + b;
 };
 const addarrow = (a, b) => a + b;
+
+//hoisting
+console.log(product); //hear use product brfore declare that is undefine..
+if (!product) deleteshoppingcart();
+var product = 10;
+function deleteshoppingcart() {
+  console.log("all product deleted");
+}
+
+//example
+var x = 1;
+let y = 2;
+const z = 3;
+console.log(x === window.x);
+console.log(x === window.y);
+console.log(x === window.z);
