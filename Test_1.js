@@ -7,7 +7,6 @@ function array1(arr) {
     console.log("Not possible");
   } else {
     console.log("posssible");
-
     for (let i = 0; i <= arr.length - 1; i = i + 1) {
       if (!first1.includes(arr[i]) && first1.length !== 3) {
         first1.push(arr[i]);
