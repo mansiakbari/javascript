@@ -1,103 +1,96 @@
 <html>
+  <head> </head>
 
-<head>
-</head>
-
-<body>
+  <body>
     <script>
+      //          code challenge 4....
+      const bill = 275;
+      const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+      console.log(
+        `total is ${bill} and Tip is ${tip} so total is ${bill + tip}`
+      );
 
-        //          code challenge 4....
-        const bill = 275;
-        const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
-        console.log(`total is ${bill} and Tip is ${tip} so total is ${bill + tip}`);
+      //Functions...
+      function loger() {
+        console.log("Mansi");
+      }
+      loger();
+      loger();
 
+      //ex2
+      // function fruit(apple , orange){
+      //     console.log(apple , orange);
+      //     const juice = `juice with ${apple} apple and ${orange} orange..`;
+      //     return juice;
+      // }
+      // const juiceline = fruit(10,10);
+      // console.log(juiceline);
+      // console.log(fruit(10,10));    //second way
 
-        //Functions...
-        function loger() {
-            console.log('Mansi');
-        }
-        loger();
-        loger();
+      // const applejuice = fruit(15,20);
+      // console.log(applejuice);
 
-        //ex2
-        // function fruit(apple , orange){
-        //     console.log(apple , orange);
-        //     const juice = `juice with ${apple} apple and ${orange} orange..`;
-        //     return juice;
-        // }
-        // const juiceline = fruit(10,10);
-        // console.log(juiceline);
-        // console.log(fruit(10,10));    //second way
+      //function dec..and expression..
+      // function calage(birthyear){             //first ,declaration
+      //     return 2022 - birthyear;
+      // }
+      // const age = calage(2001);
+      // console.log(age);
 
-        // const applejuice = fruit(15,20);
-        // console.log(applejuice); 
+      // const calage2 = function(birthyear){      //second way,expression
+      //     return 2022 - birthyear;
+      // }
+      // const age2 = calage2(2001);
+      // console.log(age2);
+      // //arrow function
 
-        //function dec..and expression..
-        // function calage(birthyear){             //first ,declaration
-        //     return 2022 - birthyear;
-        // }
-        // const age = calage(2001);
-        // console.log(age);
+      // const calage3 = birthyear => 2022 - birthyear;
+      // const age3 = calage3(2001);
+      // console.log(age3);
 
-        // const calage2 = function(birthyear){      //second way,expression
-        //     return 2022 - birthyear;
-        // }
-        // const age2 = calage2(2001);
-        // console.log(age2);
-        // //arrow function
+      //     //multiple argu...
+      // const retirement = (birthyear , name) => {
+      //    const age  = 2022 - birthyear;
+      //    const ret = 50 - age;
+      //    return `${name} is retires age left ${ret}`;
+      // }
+      //    console.log(retirement(2001 , "mansi"));
 
-        // const calage3 = birthyear => 2022 - birthyear;
-        // const age3 = calage3(2001);
-        // console.log(age3);
+      // function cutfruitpieces(fruits) {
+      //     return fruits * 4;
+      // }
 
-        //     //multiple argu...
-        // const retirement = (birthyear , name) => {
-        //    const age  = 2022 - birthyear;
-        //    const ret = 50 - age;
-        //    return `${name} is retires age left ${ret}`;
-        // }
-        //    console.log(retirement(2001 , "mansi"));
+      // function fruit(apples, oranges) {
 
+      //     const applepieces = cutfruitpieces(apples);
+      //     const orangepieces = cutfruitpieces(oranges);
 
-        // function cutfruitpieces(fruits) {
-        //     return fruits * 4;
-        // }
+      //     const juice = `apple juice with ${applepieces} piece of apple and orange juice
+      //            with ${orangepieces} piece of oranges`;
+      //     return juice;
+      // }
+      // const juiceline = fruit(5, 3);
+      // console.log(juiceline);
 
-        // function fruit(apples, oranges) {
+      //reviewing..
 
-        //     const applepieces = cutfruitpieces(apples);
-        //     const orangepieces = cutfruitpieces(oranges);
+      const calcage = function (birthyear) {
+        return 2022 - birthyear;
+      };
+      const yearsuntileretirement = function (name, birthyear) {
+        const age = calcage(birthyear);
+        const retirement = 55 - age;
 
-        //     const juice = `apple juice with ${applepieces} piece of apple and orange juice 
-        //            with ${orangepieces} piece of oranges`;
-        //     return juice;
-        // }
-        // const juiceline = fruit(5, 3);
-        // console.log(juiceline);
-
-        //reviewing..
-
-        const calcage = function(birthyear){
-            return 2022 - birthyear; 
-        }
-        const yearsuntileretirement = function(name,birthyear){
-            const age = calcage(birthyear);
-            const retirement = 55 - age;
-        
-        if (retirement > 0 ) {
-            console.log(`${name} is retire in ${retirement} years..`);
-            return retirement;
+        if (retirement > 0) {
+          console.log(`${name} is retire in ${retirement} years..`);
+          return retirement;
         } else {
-            console.log(`${name} is already retired..;)`);
-            return 9999;
-        }          
-    }
-        console.log(yearsuntileretirement("mansi" ,2001 ));
-        console.log(yearsuntileretirement("abc" , 1960));
-
-
-
+          console.log(`${name} is already retired..;)`);
+          return 9999;
+        }
+      };
+      console.log(yearsuntileretirement("mansi", 2001));
+      console.log(yearsuntileretirement("abc", 1960));
     </script>
-</body>
-
+  </body>
 </html>
