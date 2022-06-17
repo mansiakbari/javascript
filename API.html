@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API</title>
+  </head>
+  <body>
+    <center><input type="button" value="save" onclick="score()" /></center>
+  </body>
+  <script>
+    // fetch("https://reqres.in/api/users/2")
+    //   .then((response) => {
+    //     return response.json();
+    //   })
+    //   .then((data) => console.log(data));
+    console.log("start");
+    const score = () => {
+      fetch("https://ghibliapi.herokuapp.com/films")
+        .then((response) => response.json())
+        //sort score
+        .then((data) => {
+          data.sort((a, b) => a.rt_score - b.rt_score);
+          console.log(data);
+          for (let x in data) {
+            document.write(` ${x} Movie Name : ${data[x].title} <br>`);
+          }
+          //download file
+          let data_string = JSON.stringify(data);
+          let file = new Blob([data_string], { type: "text" });
+          let anchor = document.createElement("a");
+          anchor.href = URL.createObjectURL(file);
+          anchor.download = "save.txt";
+          anchor.click();
+        });
+    };
+
+    
+  </script>
+</html>
