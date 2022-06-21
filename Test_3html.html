@@ -28,7 +28,40 @@
       { name: "hani", age: "18", class: "B", marks: 20, attendance: 85 },
       { name: "pari", age: "25", class: "A", marks: 10, attendance: 60 },
     ];
+    //using groupby function...
+    function groupBy(list, keyGet) {
+      const map = new Map();
+      list.forEach((item) => {
+        const key = keyGet(item);
+        const collection = map.get(key);
+        if (!collection) {
+          map.set(key, [item]);
+        } else {
+          collection.push(item);
+        }
+      });
+      return map;
+    }
 
+    const grouped = groupBy(std_info, (std) => std.class);
+    console.log("grouped by class");
+    console.log(grouped.get("A"));
+    console.log(grouped.get("B"));
+
+    var t = "<tbody>";
+    for (i = 0; i < std_info.length; i++) {
+      t += "<tr>";
+      t += "<td>" + std_info[i].name + "</td>";
+      t += "<td>" + std_info[i].age + "</td>";
+      t += "<td>" + std_info[i].class + "</td>";
+      t += "<td>" + std_info[i].marks + "</td>";
+      t += "<td>" + std_info[i].attendance + "</td>";
+      t += "</tr>";
+    }
+    t += "</tbody>";
+    document.getElementById("tableData").innerHTML = t;
+
+    //without function
     std_info.sort(function (a, b) {
       if (a.class < b.class) return -1;
       if (a.class > b.class) return 1;
@@ -74,18 +107,5 @@
     console.log("maxAttendence 0f B :" + c3);
     console.log("minAttendence 0f B:" + c4);
     // console.log(std_info);
-
-    var t = "<tbody>";
-    for (i = 0; i < std_info.length; i++) {
-      t += "<tr>";
-      t += "<td>" + std_info[i].name + "</td>";
-      t += "<td>" + std_info[i].age + "</td>";
-      t += "<td>" + std_info[i].class + "</td>";
-      t += "<td>" + std_info[i].marks + "</td>";
-      t += "<td>" + std_info[i].attendance + "</td>";
-      t += "</tr>";
-    }
-    t += "</tbody>";
-    document.getElementById("tableData").innerHTML = t;
   </script>
 </html>

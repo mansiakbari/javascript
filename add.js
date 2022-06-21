@@ -1,6 +1,7 @@
 window.onload = function () {
   const tbody = document.getElementById("tb");
   let store = localStorage.getItem("user");
+
   let scr = JSON.parse(store);
   console.log(scr);
   if (scr === null) {
@@ -15,7 +16,6 @@ window.onload = function () {
         let td = document.createElement("td");
         td.innerHTML = `${data[key]}`;
         tr.appendChild(td);
-        // tr.appendChild(edit);
       }
     }
     tbody.appendChild(tr);
@@ -37,14 +37,37 @@ function edit(y) {
   document.getElementById("name").value = selectedtr.cells[0].innerHTML;
   document.getElementById("job").value = selectedtr.cells[1].innerHTML;
 }
-function update() {
+function update(z) {
   selectedtr.cells[0].innerHTML = document.getElementById("name").value;
   selectedtr.cells[1].innerHTML = document.getElementById("job").value;
+}
+function dlt(dl) {
+  var dltrow = dl.parentElement.parentElement;
+  dltrow.remove();
+  clear();
+  // sessionStorage.removeItem(dltrow);
+  // console.log(dltrow);
+}
+function clear() {
+  document.getElementById("name").value = "";
+  document.getElementById("job").value = "";
 }
 
 const add = () => {
   const name = document.getElementById("name").value;
   const job = document.getElementById("job").value;
+  if (name === "" && job === "") {
+    alert("Name and Job Required");
+    return false;
+  }
+  // if (!isNaN(name)) {
+  //   alert("Enter Valid Input For Name");
+  //   return false;
+  // }
+  // if (!isNaN(job)) {
+  //   alert("Enter Valid Input For Job");
+  //   return false;
+  // }
   document.getElementById("table").style.display = "block";
   let table = document.getElementById("table");
   let row = table.insertRow(-1);
@@ -53,20 +76,9 @@ const add = () => {
   let edit = row.insertCell(2);
   nm.innerHTML = document.getElementById("name").value;
   jb.innerHTML = document.getElementById("job").value;
-  edit.innerHTML = `<a class="edit" id="edit" onClick="edit(this)">Edit</a>`;
+  edit.innerHTML = `<button class="edit" id="edit" onClick="edit(this)">Edit</button> & 
+  <button class="dlt" id="dlt" onClick="dlt(this)">Delete </button>`;
 
-  if (name === "" && job === "") {
-    alert("Name and Job Required");
-    return false;
-  }
-  if (!isNaN(name)) {
-    alert("Enter Valid Input For Name");
-    return false;
-  }
-  if (!isNaN(job)) {
-    alert("Enter Valid Input For Job");
-    return false;
-  }
   fetch("https://reqres.in/api/users", {
     method: "POST",
     body: JSON.stringify({
@@ -93,4 +105,5 @@ const add = () => {
       });
       localStorage.setItem("user", JSON.stringify(store));
     });
+  clear();
 };

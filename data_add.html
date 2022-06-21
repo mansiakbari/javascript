@@ -6,30 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>POST api</title>
   </head>
+
   <body>
-    <h1>Login</h1>
-    <form id="form" method="post">
-      Name :
-      <input type="text" id="name" name="name" required />
+    <center>
+      <h1>Login</h1>
+      <form id="form" method="post">
+        Name :
+        <input
+          type="text"
+          id="name"
+          name="name"
+          onkeypress="return /[a-z, ]/i.test(event.key)"
+          required
+        />
+        <br />
+        <br />
+        Job :
+        <input
+          type="text"
+          id="job"
+          name="job"
+          onkeypress="return /[a-z, ]/i.test(event.key)"
+          required
+        />
+        <br />
+        <br />
+        <input type="button" value="Add" onclick="empty()" />
+      </form>
       <br />
-      <br />
-      Job : <input type="text" id="job" name="job" required />
-      <br />
-      <br />
-      <input type="button" value="Add" onclick="empty()" />
-    </form>
-    <br />
-    <div id="result"></div>
-    <table id="table" border="1">
-      <thead>
-        <tr>
-          <td>Name</td>
-          <td>Job</td>
-          <td>Update</td>
-        </tr>
-      </thead>
-      <tbody id="tb"></tbody>
-    </table>
+      <div id="result"></div>
+      <table id="table" border="1">
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Job</td>
+            <td>Update</td>
+          </tr>
+        </thead>
+        <tbody id="tb"></tbody>
+      </table>
+    </center>
   </body>
   <script src="add.js"></script>
 </html>
