@@ -20,6 +20,7 @@
         const maxLength = Math.max(cols, rows);
         let tempArr = [];
         let result = [];
+    
         for (let k = 0; k <= 2 * (maxLength - 1); k++) {
           let temp = [];
           for (let y = cols - 1; y >= 0; y--) {
@@ -43,6 +44,7 @@
             tempArr[tempArr.indexOf(arr[i])].pop();
           }
           result.push(tempResult);
+          
         }
         console.log(result);
       }
