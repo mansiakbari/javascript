@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All fun</title>
+  </head>
+  <body></body>
+  <script>
+    //string..
+    let str = "Hello World";
+    let str1 = "Hello Team";
+    console.log(str, str1);
+    let len = str.length;
+    console.log(len);
+    console.log(str.toLowerCase());
+    console.log(str.toUpperCase());
+    console.log(str.includes("World"));
+    console.log(str.startsWith("Hello", 0));
+    console.log(str.endsWith("d", 15));
+    console.log(str.search("e")); //return -1 if no match
+    console.log(str.match("e"));
+    console.log(str.indexOf("o"));
+    console.log(str.lastIndexOf("o"));
+    console.log(str.replace("World", "Team"));
+    console.log(str.trim());
+    console.log(str.charAt(1));
+    console.log(str.charCodeAt(1));
+    // console.log(str.fromCharCode(69));
+    console.log(str.concat(str1));
+    console.log(str.split(""));
+    console.log(str.repeat(2));
+    console.log(str.slice(0, 7));
+    console.log(str.substring(1, 4));
+    console.log(str.substr(1, 4));
+    console.log(str.toString());
+    console.log(str.valueOf());
+    //number...
+    // Number= let x=3.14
+    // y=3.14=3
+    let str3 = "Team 1";
+    let num = 6.647523;
+    console.log(parseInt("1Team"));
+    console.log(parseInt("10.55"));
+    console.log(parseFloat("10.69"));
+    console.log(isFinite("10.69"));
+    console.log(isFinite("mansi"));
+    console.log(Number.isInteger(5.69)); //t or f
+    console.log(num.toFixed(1)); //point pachi nu fix kre
+    console.log(num.toPrecision(3));
+
+    //Array...
+    let arr = ["apple", "orange", "mango", "kiwi", "dragonfood", "kiwi"];
+    // console.log(arr.sort());
+    // console.log(arr.reverse());
+    // //add remove
+    // console.log(arr.push("abccc")); //add-end
+    // console.log(arr);
+    // console.log(arr.pop()); //remove-last
+    // console.log(arr);
+
+    // console.log(arr.unshift("asdasdas")); //add first
+    // console.log(arr);
+
+    // console.log(arr.shift()); //remove-first
+    // console.log(arr);
+    // //concat
+    // console.log(arr.concat(arr)); //other arr
+    // console.log(arr.join(" arr "));
+    //slice
+    // console.log(arr.slice(1, 4)); //new array banave//old same
+    // console.log(arr);
+    // console.log(arr.splice(1, 4)); //changed array
+    // console.log(arr);
+    // console.log(Array.isArray(arr));
+    console.log(arr.indexOf("kiwi"));
+    console.log(arr.lastIndexOf("kiwi"));
+    //give key n pair value
+    let a = arr.entries();
+    for (let x of a) {
+      console.log(x);
+    }
+    //arry ma ek khotu hoy to akhu false
+    //badha sacha hoy to true
+    const ages = [32, 33, 69, 40];
+    console.log(ages.every(checkAge));
+
+    function checkAge(age) {
+      return age > 18;
+    }
+    //array mathi filter krine ans apse
+    const ages1 = [32, 33, 69, 10, 5];
+    console.log(ages1.filter(checkAge));
+
+    function checkAge(age) {
+      return age > 18;
+    }
+    //return first that find in array
+    const ages2 = [10, 500, 5, 100, 32, 33, 69];
+    console.log(ages2.find(checkAge));
+
+    function checkAge(age) {
+      return age > 18;
+    }
+    //indext return kre
+    const ages3 = [10, 5, 500, 5, 100, 32, 33, 69];
+    console.log(ages3.findIndex(checkAge));
+
+    function checkAge(age) {
+      return age > 18;
+    }
+    //return che k ny
+    console.log(arr.includes("kiwi"));
+    //some..return t or f
+    const ages4 = [10, 5];
+    console.log(ages4.some(checkAge));
+
+    function checkAge(age) {
+      return age > 18;
+    }
+    //for each
+    const array1 = ["a", "b", "c"];
+
+    array1.forEach((element, index) => console.log(element, index));
+    //tostring
+    console.log(arr.toString());
+    console.log(arr);
+    //valueof
+    console.log(arr.valueOf());
+    console.log(arr.fill("cherry", 2, 4)); //2 n 3 pr add kre
+
+    let aaa = [5, 7, 99, 22];
+    console.log(aaa.filter(checkAge));
+    function checkAge(age) {
+      return age > 10;
+    }
+    //spread op..
+    let abc = [1, 2, 3, 1, 2, 3, 1, 2, 3];
+    console.log(...new Set(abc));
+    //map
+    // console.log(map.abc());
+
+    //math...
+    console.log(Math.PI);
+    console.log(Math.ceil(4.9));
+    console.log(Math.floor(4.3));
+    console.log(Math.trunc(5.4444));
+    console.log(Math.sign(6));
+    console.log(Math.round(2.3));
+    console.log(Math.max(2, 4564, 51311));
+    console.log(Math.min(2, 565, 5));
+    console.log(Math.sqrt(64));
+    console.log(Math.cbrt(64));
+    console.log(Math.pow(2, 4));
+    console.log(Math.trunc(Math.random(5)));
+    console.log(Math.abs(-7.25)); //remove minus
+
+    // Date function
+    let d = new Date();
+    console.log(d.toDateString());
+    console.log(d.getDate());
+    console.log(d.getFullYear());
+    console.log(d.getMonth());
+    console.log(d.getDay()); //day no number
+    console.log(d.getHours());
+    console.log(d.getMinutes());
+    console.log(d.getSeconds());
+    console.log(d.getMilliseconds());
+    console.log(d.setDate(16));
+    console.log(d.setFullYear(16));
+    console.log(d.setHours(16));
+    console.log(d.setMilliseconds(16));
+    console.log(d.setMinutes(16));
+    console.log(d.setMonth(16));
+    console.log(d.setSeconds(16));
+
+    function mansi(birthyear) {
+      return 2022 - birthyear;
+    }
+    console.log(mansi(2001));
+    //typeof
+    function getAge(...args) {
+      console.log(typeof args);
+    }
+
+    getAge(21);
+  </script>
+</html>
+
+<!-- 
+1-Which built-in method returns the characters in a string beginning at the specified location?
+
+2-Which built-in method returns the string representation of the number's value?
+
+3-Which built-in method returns the character at the specified index?
+
+4-Which of the following function of Array object calls a function for each element in the array?
+
+5-Which of the following function of Number object formats a number with a specific number of digits to the right of the decimal?
+
+
+ans- substr() method returns the characters in a string beginning at the specified location through the specified number of characters.
+ans-toString() method returns the string representation of the number's value
+ans-charAt() method returns the character at the specified index.
+ans-forEach() − Calls a function for each element in the array.
+ans-toFixed() − Formats a number with a specific number of digits to the right of the decimal
+-->

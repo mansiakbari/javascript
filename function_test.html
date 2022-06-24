@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fun_test</title>
+  </head>
+  <body>
+    <script>
+      //   // 1-
+      //   function sayHi() {
+      //     console.log(name);
+      //     console.log(age);
+      //     var name = "Lydia";
+      //     let age = 21;
+      //   }
+      //   sayHi();
+      //   //2
+      //   const bird = {
+      //     size: "small",
+      //   };
+
+      //   const mouse = {
+      //     name: "Mickey",
+      //     small: true,
+      //   };
+
+      //   // A: mouse.bird.size is not valid
+      //   // B: mouse[bird.size] is not valid
+      //   // C: mouse[bird["size"]] is not valid
+      //   // D: All of them are valid
+
+      //   //3
+      //   let c = { greeting: "Hey!" };
+      //   let d;
+
+      //   d = c;
+      //   c.greeting = "Hello";
+      //   console.log(d.greeting);
+
+      //   //4
+      a = 3;
+      b = new Number(3);
+      c = 3;
+
+      console.log(a == b);
+      console.log(a === b);
+      console.log(b === c);
+
+      //   //5
+      //   let sum;
+      //   function sum(a1, b1) {
+      //     return a1 + b1;
+      //   }
+      //   sum(1, "2");
+
+      //   //6...............
+      let number = 0;
+      console.log("first " + number++); //0
+      console.log("second " + ++number); //2
+      console.log("third " + number); //2
+
+      //7.................
+      function getPersonInfo(one, two, three) {
+        console.log(one);
+        console.log(typeof two);
+        console.log(three);
+      }
+      const person = "Lydia";
+      const age = 21;
+      getPersonInfo`${person} is ${age} years old`;
+
+      //8.................
+      function getAge(...args) {
+        console.log(typeof args);
+      }
+      getAge(21);
+
+      //9...................
+      const ev = eval("10*10+5");
+      console.log(ev);
+
+      //10......................
+      var num = 8;
+      var num = 10;
+      console.log(num);
+
+      //11
+      for (let i = 1; i < 5; i++) {
+        if (i === 3) continue;
+        console.log(i);
+      }
+    </script>
+  </body>
+</html>
